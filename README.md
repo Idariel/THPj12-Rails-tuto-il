@@ -39,9 +39,12 @@ Le **controller**
 ## Les relations entre les models des BDD
 
 ## Les fonctions du CRUD
-> **Create**, permet de créer un nouvel enregistrement. (POST)
-> **Read**, permet d'afficher un ou plusieurs enregistrements. (GET)
-> **Update**, permet de mettre à jour un enregistrement. (PUT)
+> **Create**, permet de créer un nouvel enregistrement. (Il s'agit d'une action POST, d'écriture)
+
+> **Read**, permet d'afficher un ou plusieurs enregistrements. (Il s'agit d'une action GET, de lecture)
+
+> **Update**, permet de mettre à jour un enregistrement. (Il s'agit d'une action PUT, de mise à jour)
+
 > **Destroy** ou **Delete**, permet de supprimer un enregistrement.
 
 > Que dire de plus, ce sont les 4 actions de base que l'ont peut pratiquer sur une base de données et dont on attend qu'elles puissent être faites par l'intermédiaire du code d'une application (créer un utilisateur, accéder à ses données, modifier ses données, supprimer l'utilisateur).
