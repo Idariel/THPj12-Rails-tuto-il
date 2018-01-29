@@ -6,11 +6,12 @@
 > Le site est généré une fois pour toutes à partir du HTML et de la CSS. Il est le même pour tout les utilisateurs qui ne peuvent que lire le contenu.
 
 ### Site *dynamique*
-> Les pages du site sont générées à la demande, souvent liées à une base de données. Les pages peuvent être différentes en fonction de l'utilisateur et des données de l'utilisateurs stockées dans la base de données. Exemple : le "Bonjour Truc", qui apparaît dès que vous avez rentré vos identifiants, ou encore les pages Facebook (ou celles de votre fournisseur d'email) qui présentent des publicités adaptées à vos goûts (en fonction des pages précédemment visitées), elles seront différentes pour une autre personne.
+> Les pages du site sont générées à la demande, souvent liées à une base de données. Les pages peuvent être différentes en fonction de l'utilisateur et des données de l'utilisateurs stockées dans la base de données. 
+> Exemple : le "Bonjour Truc", qui apparaît dès que vous avez rentré vos identifiants, ou encore les pages Facebook (ou celles de votre fournisseur d'email) qui présentent des publicités adaptées à vos goûts (en fonction des pages précédemment visitées), elles seront différentes pour une autre personne.
 
 ## Le MVC
-> Le _MVC_, en anglais _Model - View -Controller_ ou en français _Modèle - Vue - Controller_. Est utilisé uniquement dans le cas d'un site dynamique où il faut aller chercher un peu plus d'infos que simplement un fichier HTML et ses CSS associées.
-Sépare l'application en 3 "modules" qui permettent d'ordonner le code et de voir plus facilement qui fait quoi. 
+> Le **MVC**, en anglais **Model - View -Controller** ou en français **Modèle - Vue - Controller*. Est utilisé uniquement dans le cas d'un site dynamique où il faut aller chercher un peu plus d'infos que simplement un fichier HTML et ses CSS associées.
+> Sépare l'application en 3 "modules" qui permettent d'ordonner le code et de voir plus facilement qui fait quoi. 
 > Le modèle MVC, c'est comme si 2 personnes (Model - View) avec des fonctions bien précises travaillaient ensemble sous la houlette d'un contrôleur (Controller) pour rendre un travail adapté à chaque utilisateur.
 Le **model**
 > Manipule les données (en lien avec la base de données).
