@@ -7,18 +7,25 @@
 
 ### Site *dynamique*
 > Les pages du site sont générées à la demande, souvent liées à une base de données. Les pages peuvent être différentes en fonction de l'utilisateur et des données de l'utilisateurs stockées dans la base de données. 
+
 > Exemple : le "Bonjour Truc", qui apparaît dès que vous avez rentré vos identifiants, ou encore les pages Facebook (ou celles de votre fournisseur d'email) qui présentent des publicités adaptées à vos goûts (en fonction des pages précédemment visitées), elles seront différentes pour une autre personne.
 
 ## Le MVC
 > Le **MVC**, en anglais **Model - View -Controller** ou en français **Modèle - Vue - Controller*. Est utilisé uniquement dans le cas d'un site dynamique où il faut aller chercher un peu plus d'infos que simplement un fichier HTML et ses CSS associées.
+
 > Sépare l'application en 3 "modules" qui permettent d'ordonner le code et de voir plus facilement qui fait quoi. 
 > Le modèle MVC, c'est comme si 2 personnes (Model - View) avec des fonctions bien précises travaillaient ensemble sous la houlette d'un contrôleur (Controller) pour rendre un travail adapté à chaque utilisateur.
+
 Le **model**
 > Manipule les données (en lien avec la base de données).
+
 La **view**
 > Contient toutes les éléments de l'interface graphique qui doivent être affichés. C'est elle qui "créée" la page à afficher avec les données qu'elle possède déjà (HTML/CSS) et les données qui lui sont transmises du Model. Dans certains cas, on parle d'IHM (Interface Homme Machine).
+
 Le **controller**
-> C'est un peu celui qui distribue les actions à faire. Il reçoit la demande (requête) de page de l'utilisateur, la redirige vers le Model (qui discute avec la base de données pour récupérer les données pertinentes). Une fois que le Model a fini son traitement, il renvoie la page vers le Controller qui la dirige alors vers la View. La View va chercher la page HTML et la CSS qui vont bien, intègre les données fournies par le Model (et la base de données), et renvoie la nouvelle page ainsi fabriquée vers le Controller qui lui affiche alors la page sur l'écran de l'utilisateur.
+> C'est un peu celui qui distribue les actions à faire. Il reçoit la demande (requête) de page de l'utilisateur, la redirige vers le Model (qui discute avec la base de données pour récupérer les données pertinentes). 
+
+> Une fois que le Model a fini son traitement, il renvoie la page vers le Controller qui la dirige alors vers la View. La View va chercher la page HTML et la CSS qui vont bien, intègre les données fournies par le Model (et la base de données), et renvoie la nouvelle page ainsi fabriquée vers le Controller qui lui affiche alors la page sur l'écran de l'utilisateur.
 
 
 ## Les routes
