@@ -108,4 +108,4 @@ Chaque colonne est un attribut auquel correspond un type de donnée particuler (
 
 > > Que dire de plus, ce sont les 4 actions de base que l'ont peut pratiquer sur une base de données et dont on attend qu'elles puissent être faites par l'intermédiaire du code d'une application (créer un utilisateur, accéder à ses données, modifier ses données, supprimer l'utilisateur).
 
-> > > > > > ![Pour ceux qui parlent anglais](https://youtu.be/Eq_GGc8_7pQ)
+> > > > > > [![Pour ceux qui parlent anglais](https://youtu.be/Eq_GGc8_7pQ)]
