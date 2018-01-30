@@ -34,29 +34,48 @@
 
 > > Une fois que le Model a fini son traitement, la requête et les données sont renvoyées vers le Controller qui redirige le tout vers la View. La View va chercher la page HTML et la CSS qui vont bien, intègre les données fournies par le Model (et la base de données), et renvoie la nouvelle page ainsi fabriquée vers le Controller qui lui affiche alors la page sur l'écran de l'utilisateur.
 
-
 ## Les routes
 > > Un site est une collection de pages qui peuvent être cartographiées comme un atlas routier. Chaque page a une adresse par rapport à la page d'accueil. On appelle cette adresse une route, qui est stockée dans le fichier routes.rb.
-> > L'utilisateur demande d'afficher une page. Le navigateur transmet la demande au router qui fournit la route à suivre (/monSite/maPageQuiVaBien) si elle se trouve dans routes.rb. Si le routeur n'a pas la route correspondante dans le fichier routes.rb, il renvoie un message d'erreur à l'utilisateur (j'avais envie de dire qu'il fait Seppuku, mais je n'aurais pas été compréhensible), sinon, il transmet l'info au Controller. Si la page n'existe pas => message d'erreur.
+> > L'utilisateur demande d'afficher une page. Le navigateur transmet la demande au router qui fournit la route à suivre (/monSite/maPageQuiVaBien) si elle se trouve dans routes.rb. Si le routeur n'a pas la route correspondante dans le fichier routes.rb, il renvoie un message d'erreur à l'utilisateur, sinon, il transmet l'info au Controller. Si la page n'existe pas => message d'erreur.
 
 > > En gros, si je veux aller à Chartres, Mappy (le router) va envoyer ma voiture (la requête) sur la route de Chartres et pas sur celle de Colmar !
 
 ## Les Bases de Données
 > > On parle en général de bases de données relationnelles.
 
-Une base de données relationnelle est un répertoire d'éléments de données dotés d'une relation prédéfinie entre eux. Ces éléments sont organisés en des tableaux définis, composés de colonnes et de rangées. Les tableaux permettent de répertorier les informations sur les objets qui doivent être représentés dans la base de données. Chaque colonne d'un tableau répertorie un certain type de données et chaque champ indique la valeur réelle d'un attribut. Les rangées d'un tableau représentent un ensemble de valeurs liées à un objet ou à une entité. Chaque rangée d'un tableau peut être marquée avec un identifiant unique, qu'on appelle une clé principale, et les rangées reprises dans plusieurs tableaux peuvent être associées en utilisant des clés étrangères. Ces données sont accessibles de plusieurs manières sans qu'il ne soit nécessaire de réorganiser les tableaux de base de données eux-mêmes.
+U> > Une base de données relationnelle est un ensemble données qui ont des relations prédéterminées entre elles. Ces éléments sont organisés en tables. 
+
+> > Les tables se présentent sous forme de colonnes et de lignes et regroupent des entités de même type 
+Chaque colonne est un attribut auquel correspond un type de donnée particuler (char, varchar, integer, date, ou autre).
+
+> > Les lignes, elles, correspondent à des objets ou des entités appartenant à la table.  
+
+> > Exemple : si on modélisait une bibliothèque, on aurait une table 'users' qui regrouperait tous les abonnées de la bibliothèque et une table 'livres' qui regrouperait tous les livres). Une ligne de chaque table correspondrait à un abonné ou à un livre. Les colonnes, elles, serait le nom de l'abonné, son adresse, ou pour le livre, son titre, le nom de son auteur, etc.
+
+Pour chaque table, il y a une ou plusieurs colonnes supplémentaires :
+> - une colonne id qui est un chiffre unique dans la table. Chaque entité a une id différente qui sert à l'identifier (idUser dans la table 'users', ou idLivre dans la table 'livres'). C'est la **clé primaire** ou **clé principale**
+> - la table peut aussi appeler les champs d'autres tables afin de faire la liaison avec elles, il s'agit alors d'une **clé étrangère**
+
 ## GET / POST
+> > Ce sont les deux méthodes les plus utilisées du HTTP (HyperText Transfer Protocol) pour envoyer et recevoir des données. Mais elles ont une première différence majeure :
+> > > - Les requêtes GET sont systématiquement ajoutée dans l'URL qui apparaît dans la barre d'adresse. Elles sont limitées en taille (impossible d'envoyer des emails) et peuvent être aisément modifiées par un utilisateur malintentionné (injection SQL).
+
+> > > - Au contraire, une requête POST est envoyé directement dans le corps de la requête. Elle est donc invisible pour l'utilisateur et de ce fait plus sécurisée et permet d'envoyer des textes de bonne taille.
 
 ## Le concept de migration
-Migrations are a convenient way for you to alter your database in a structured and organized manner. You could edit fragments of SQL by hand but you would then be responsible for telling other developers that they need to go and run them. You’d also have to keep track of which changes need to be run against the production machines next time you deploy.
+> > Les migrations permettent de modifier les bases de données de façon structurée et organisée, par l'intermédiare de Ruby on Rails, sans intervention manuelle dans la base et sans avoir à prévenir les autres développers.
 
-Active Record tracks which migrations have already been run so all you have to do is update your source and run rake db:migrate. Active Record will work out which migrations should be run. It will also update your db/schema.rb file to match the structure of your database.
+> > Rails utilise par défaut ActiveRecord qui permet suivre les migrations qui ont déja été faites et celles qui sont à faire. ActiveRecord indique à Rails que la base de données doit être modifiée.
 
-Migrations also allow you to describe these transformations using Ruby. The great thing about this is that (like most of Active Record’s functionality) it is database independent: you don’t need to worry about the precise syntax of CREATE TABLE any more than you worry about variations on SELECT * (you can drop down to raw SQL for database specific features). For example you could use SQLite3 in development, but MySQL in production.
+> > Il suffit d'écrire la modification à faire, puis de faire un $ rake db:migrate pour créer ou mettre à jour la base de données.
+
+> > L'utilisation d'ActiveRecord présente un gros avantage : cette méthode peut être utilisée avec toutes les bases de données. Le développeur peut donc utiliser une base de données pendant le développement et une autre en production sans que cela n'exige de lui de coder différemment.
 
 ## Les relations entre les models des BDD
 
 ## Les fonctions du CRUD
+> > Permettent à l'utilisateur d'interagir avec la base de données par l'intermédiaire de l'interface en front-end.
+
 > > **Create**, permet de créer un nouvel enregistrement. (Il s'agit d'une action POST, d'écriture)
 
 > > **Read**, permet d'afficher un ou plusieurs enregistrements. (Il s'agit d'une action GET, de lecture)
@@ -65,6 +84,6 @@ Migrations also allow you to describe these transformations using Ruby. The grea
 
 > *> *Destroy** ou **Delete**, permet de supprimer un enregistrement.
 
-> >
+> > 
 
 > > Que dire de plus, ce sont les 4 actions de base que l'ont peut pratiquer sur une base de données et dont on attend qu'elles puissent être faites par l'intermédiaire du code d'une application (créer un utilisateur, accéder à ses données, modifier ses données, supprimer l'utilisateur).
