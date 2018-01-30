@@ -55,6 +55,7 @@ Chaque colonne est un attribut auquel correspond un type de donnée particuler (
 > > Pour chaque table, il y a une ou plusieurs colonnes supplémentaires :
 > > - une colonne id qui est un chiffre unique dans la table. Chaque entité a une id différente qui sert à l'identifier (idUser dans la table 'users', ou idLivre dans la table 'livres'). C'est la **clé primaire** ou **clé principale**
 > > - la table peut aussi appeler les champs d'autres tables afin de faire la liaison avec elles, il s'agit alors d'une **clé étrangère**
+[Conventions de nommage Rails / SQL](http://www.isalechat.fr/visuels/namingConvention.png)
 
 ## GET / POST
 > > Ce sont les deux méthodes les plus utilisées du HTTP (HyperText Transfer Protocol) pour envoyer et recevoir des données. Mais elles ont une première différence majeure :
@@ -79,7 +80,7 @@ Chaque colonne est un attribut auquel correspond un type de donnée particuler (
 > > Active Record permet de générer la base de données directement à partir des classes des models avec la syntaxe correcte de SQL. 
 
 > > Si on fait un .all sur une class (en mode console irb), on constate qu'Active Record fait une requête SQL en utilisant le nom de la table en minuscule et au pluriel (totos) alors que le .all a été fait en utilisant le nom de classe de type Toto.
-[Naming Convention](http://www.isalechat.com/namingConvention.png)
+[Conventions de nommage Rails / SQL](http://www.isalechat.fr/visuels/namingConvention.png)
 
 
 > > ActiveRecord est un ORM (Object Relational Mapping). Il représente :
