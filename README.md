@@ -11,6 +11,7 @@
 > > *__Exemple__* : le "Bonjour Truc", qui apparaît dès que vous avez rentré vos identifiants, ou encore les pages Facebook (ou celles de votre fournisseur d'email) qui présentent des publicités adaptées à vos goûts (en fonction des pages précédemment visitées), elles seront différentes pour une autre personne.
 
 ## Le MVC
+![MVC](https://qph.ec.quoracdn.net/main-qimg-5d53e5e0fa03da841194868be4e14a18)
 > > Le **MVC**, en anglais **Model - View -Controller** ou en français **Modèle - Vue - Controller**. Est utilisé uniquement dans le cas d'un site dynamique où il faut aller chercher un peu plus d'infos que simplement un fichier HTML et ses CSS associées.
 
 > > Sépare l'application en 3 "modules" indépendants qui permettent d'ordonner le code et de voir plus facilement qui fait quoi. De façon pratique, tous les fichiers correspondant au model sont regroupés dans le dossier Models, ceux correspondants au controller sont dans le dossier Controller et ceux relatifs à la View sont dans Views. 3 bonnes raisons d'utiliser le MVC :
@@ -55,7 +56,7 @@ Chaque colonne est un attribut auquel correspond un type de donnée particuler (
 > > Pour chaque table, il y a une ou plusieurs colonnes supplémentaires :
 > > - une colonne id qui est un chiffre unique dans la table. Chaque entité a une id différente qui sert à l'identifier (idUser dans la table 'users', ou idLivre dans la table 'livres'). C'est la **clé primaire** ou **clé principale**
 > > - la table peut aussi appeler les champs d'autres tables afin de faire la liaison avec elles, il s'agit alors d'une **clé étrangère**
-[Conventions de nommage Rails / SQL](http://www.isalechat.fr/visuels/namingConvention.png)
+![Exemple de base de données](http://www.ballajack.com/wp-content/uploads/2011/07/base-donnees-mysql.jpg)
 
 ## GET / POST
 > > Ce sont les deux méthodes les plus utilisées du HTTP (HyperText Transfer Protocol) pour envoyer et recevoir des données. Mais elles ont une première différence majeure :
@@ -80,7 +81,7 @@ Chaque colonne est un attribut auquel correspond un type de donnée particuler (
 > > Active Record permet de générer la base de données directement à partir des classes des models avec la syntaxe correcte de SQL. 
 
 > > Si on fait un .all sur une class (en mode console irb), on constate qu'Active Record fait une requête SQL en utilisant le nom de la table en minuscule et au pluriel (totos) alors que le .all a été fait en utilisant le nom de classe de type Toto.
-[Conventions de nommage Rails / SQL](http://www.isalechat.fr/visuels/namingConvention.png)
+![Conventions de nommage Rails / SQL](http://www.isalechat.fr/visuels/namingConvention.png)
 
 
 > > ActiveRecord est un ORM (Object Relational Mapping). Il représente :
