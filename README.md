@@ -79,7 +79,7 @@ Chaque colonne est un attribut auquel correspond un type de donnée particuler (
 > > Active Record permet de générer la base de données directement à partir des classes des models avec la syntaxe correcte de SQL. 
 
 > > Si on fait un .all sur une class (en mode console irb), on constate qu'Active Record fait une requête SQL en utilisant le nom de la table en minuscule et au pluriel (totos) alors que le .all a été fait en utilisant le nom de classe de type Toto.
-[Naming Convention](www.isalechat.com/namingConvention.png)
+[Naming Convention](http://www.isalechat.com/namingConvention.png)
 
 
 > > ActiveRecord est un ORM (Object Relational Mapping). Il représente :
