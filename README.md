@@ -12,6 +12,7 @@
 
 ## Le MVC
 > > > > > > ![MVC](https://qph.ec.quoracdn.net/main-qimg-5d53e5e0fa03da841194868be4e14a18)
+
 > > Le **MVC**, en anglais **Model - View -Controller** ou en français **Modèle - Vue - Controller**. Est utilisé uniquement dans le cas d'un site dynamique où il faut aller chercher un peu plus d'infos que simplement un fichier HTML et ses CSS associées.
 
 > > Sépare l'application en 3 "modules" indépendants qui permettent d'ordonner le code et de voir plus facilement qui fait quoi. De façon pratique, tous les fichiers correspondant au model sont regroupés dans le dossier Models, ceux correspondants au controller sont dans le dossier Controller et ceux relatifs à la View sont dans Views. 3 bonnes raisons d'utiliser le MVC :
@@ -107,4 +108,4 @@ Chaque colonne est un attribut auquel correspond un type de donnée particuler (
 
 > > Que dire de plus, ce sont les 4 actions de base que l'ont peut pratiquer sur une base de données et dont on attend qu'elles puissent être faites par l'intermédiaire du code d'une application (créer un utilisateur, accéder à ses données, modifier ses données, supprimer l'utilisateur).
 
-> > > > > > [![Pour ceux qui parlent anglais](https://youtu.be/Eq_GGc8_7pQ)
+> > > > > > ![Pour ceux qui parlent anglais](https://youtu.be/Eq_GGc8_7pQ)
