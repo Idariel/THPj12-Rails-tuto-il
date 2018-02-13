@@ -104,7 +104,7 @@ Chaque colonne est un attribut auquel correspond un type de donnée particuler (
 
 > > - **Update**, permet de mettre à jour un enregistrement. (Il s'agit d'une action PUT, de mise à jour)
 
-> *> *- Destroy** ou **Delete**, permet de supprimer un enregistrement.
+> > - **Destroy** ou **Delete**, permet de supprimer un enregistrement.
 
 > > Que dire de plus, ce sont les 4 actions de base que l'ont peut pratiquer sur une base de données et dont on attend qu'elles puissent être faites par l'intermédiaire du code d'une application (créer un utilisateur, accéder à ses données, modifier ses données, supprimer l'utilisateur).
 
